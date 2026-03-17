@@ -1,10 +1,12 @@
 import SwiftUI
+import SwiftData
 
 @main
-struct FlightTrackerApp: App {
+struct OpenFlightApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
+        .modelContainer(for: Flight.self)
     }
 }
